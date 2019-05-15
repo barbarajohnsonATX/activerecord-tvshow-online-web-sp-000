@@ -15,4 +15,9 @@ class Show < ActiveRecord::Base
   def Show::most_popular_show
     Show.order(rating: :desc).first 
   end 
+  
+  def Show::least_popular_show 
+    Show.order(rating: :asc).first 
+  end 
+  
 end
